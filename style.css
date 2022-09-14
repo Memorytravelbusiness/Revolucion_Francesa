@@ -1,0 +1,122 @@
+@import url('//fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,800&display=swap');
+/* ======================== */
+.container{   
+  position:fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  place-content: center;
+  height: 100vh;
+  width: 100%;
+  justify-content: cen;
+  background-color: rgb(6, 0, 39);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  z-index: 100000;
+  transform: 5s;
+}
+
+.cargando{
+    position:fixed;
+  top: 0;
+  display: flex;
+    width: 120px;
+    height: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+  margin: 0 auto; 
+}
+.texto-cargando{ 
+  padding-top:20px
+}
+.cargando span{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.pelotas {
+  margin-top: 310px;
+    width: 30px;
+    height: 30px;
+    background-color: #ffffff;
+    animation: salto .6s alternate infinite;
+  border-radius: 50%  
+}
+.pelotas:nth-child(2) {
+    animation-delay: .18s;
+}
+.pelotas:nth-child(3) {
+    animation-delay: .37s;
+}
+@keyframes salto {
+    from {
+        transform: scaleX(1.25);
+    }
+    to{
+        transform: 
+        translateY(-50px) scaleX(1);
+    }
+}
+body {
+  font-family: 'candara';
+  text-align: justify;
+}
+.section {
+  display: flex;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+}
+.section > * {
+  width: 50%;
+}
+.section__img {
+  position: relative;
+  display: flex;
+}
+.section__img__inner {
+  height: 100%;
+  position: fixed;
+  left: 0%;
+  width: 50%;
+  top: 0;
+  mix-blend-mode: multiply;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.section__body {
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 100;
+}
+.section__text {
+  padding: 5vw;
+  text-align: justify;
+}
+
+.section__img__inner {
+  filter: blur(10px);
+  opacity: 0;
+  background-position: 50% 40%;
+  transition: filter 0.6s ease, opacity 0.6s ease, background-position 0.8s ease;
+}
+
+.section.active .section__img__inner {
+  opacity: 1;
+  background-position: 50% 50%;
+  filter: blur(0);
+}
+
+h2 {
+  font-size: 3vw;
+  margin-bottom: 0.5em;
+  margin-top: 0;
+}
+
+p {
+  font-size: 18px;
+}
